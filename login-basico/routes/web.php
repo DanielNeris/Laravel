@@ -20,4 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/produtos', 'ProdutoControlador@Index')->name('produtos');
+Route::get('/departamentos', 'DepartamentoControlador@Index')->name('departamentos');
 
