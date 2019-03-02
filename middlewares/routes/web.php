@@ -2,4 +2,4 @@
 
 use App\Http\Middleware\PrimeiroMiddleware;
 
-Route::get('/usuarios', 'UsuarioControlador@Index')->middleware(PrimeiroMiddleware::class);
+Route::get('/usuarios', 'UsuarioControlador@Index')->middleware('primeiro');
