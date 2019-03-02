@@ -13,6 +13,10 @@ class ProdutoControlador extends Controller
         "HD Externo"
     ];
 
+    public function __construct() {
+        $this->middleware('produtoAdmin');
+    }
+
     public function Index() {
         
         echo "<h3>Produtos</h3>";
