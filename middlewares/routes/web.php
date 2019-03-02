@@ -6,8 +6,8 @@
 
 Route::get('/usuarios', 'UsuarioControlador@Index');
 
-Route::get('/', function (){
-    return 'teste2';
-});
+Route::get('/terceiro', function (){
+    return 'Passou pelo terceiroMiddleware';
+})->middleware('terceiro::daniel,20');
 
 // Route::get('/usuarios', 'UsuarioControlador@Index')->middleware(['primeiro', 'segundo']);
