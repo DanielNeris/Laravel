@@ -16,8 +16,10 @@ class PrimeiroMiddleware
      */
     public function handle($request, Closure $next)
     {
-        Log::debug('Passou pelo primeiroMiddleware');
-        return $next($request);
-        // return response('teste');
+        Log::debug('Passou pelo primeiroMiddleware ANTES');
+        $response = $next($request);
+        Log::debug('Passou pelo primeiroMiddleware DEPOIS');
+        return $response;
+        // return response('Alterei a resposta', 201);
     }
 }
